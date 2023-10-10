@@ -1,0 +1,12 @@
+str=input("write your sting: ")
+str_low=str.casefold()
+p=""
+for char in str_low:
+    if char not in p:
+        p=p+char
+count={}.fromkeys(p,0)
+dic={}
+for item in str_low:
+    if item in count:
+        count[item]+=1
+print(count)
