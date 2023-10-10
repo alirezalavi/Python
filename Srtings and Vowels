@@ -1,0 +1,24 @@
+A = input("write: ")
+B = A.replace(" ","")
+vowel = ["a","A", "e", "E", "I" ,"i","o" ,"O","u", "U"]
+for j in B:
+    for z in vowel:
+        if z==j:
+            if z in vowel:
+                B = B.replace(j, ".")
+            else:
+                continue
+
+def convert(string):
+    newstring = ""
+    for char in string:
+        if 65<= (ord (char))<= 90 :#upper to lower
+            newstring += chr (ord(char) + 32)
+
+        elif 97<=(ord (char))<= 122 :#lower to upper
+            newstring += chr (ord(char) - 32)
+        else :
+            newstring += char
+    return newstring
+
+print (convert(B))
