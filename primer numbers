@@ -1,0 +1,12 @@
+first= int(input("first num: "))
+last= int(input("last num: "))
+lis=[]
+while first<=last:
+    for n in range(2,first):
+        if first%n == 0:
+            break
+    else:
+        lis.append(first)
+    first=first+1
+
+print(lis)
