@@ -1,0 +1,17 @@
+num= int(input("Your num: "))
+
+def fac(n):
+    z = n
+    if n == 0:
+        return 1
+    for i in range(n, 1, -1):
+        z=z*(i-1)
+    return z
+
+def nep (n):
+    ex=0
+    for i in range(0,n+1):
+        ex=ex+((n**i)/fac(i))
+    return ex
+
+print(nep(num))
