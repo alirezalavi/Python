@@ -1,0 +1,12 @@
+centi=input("your degree: ")
+def far (cen):
+    farenheat = []
+    faren = cen.split(" ")
+    for n in range(0, len(faren)):
+        fa = float(faren[n])
+        fc = (fa * 1.8) + 32
+        farenheat.append(fc)
+
+    return farenheat
+
+print(far(centi))
