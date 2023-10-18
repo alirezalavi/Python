@@ -1,0 +1,13 @@
+number = input("your number: ")
+def cal(num):
+    n=0
+    for i in range(0,len(num)):
+        n+=int(num[i])
+    if n<9:
+        return n
+    elif n>=10:
+        st=str(n)
+        return cal(st)
+
+
+print(cal(number))
