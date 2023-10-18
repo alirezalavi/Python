@@ -1,0 +1,10 @@
+pos= int(input("your post code: "))
+def code(num):
+    if num<(10**10):
+        return "unavailable"
+    num2=num//100000
+    num3=num%100000
+    num4 =str(num2)+"-"+str(num3)
+    return num4
+
+print(code(pos))
