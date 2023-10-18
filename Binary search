@@ -1,0 +1,20 @@
+num = input("your num: ")
+
+def binary(*args):
+    a=""
+    intlis=[]
+    for i in range(0,len(args)):
+        a=a+args[i]
+        bspil=a.split(" ")
+        for n in range(0,len(bspil)):
+            intlis.append(int(bspil[n]))
+            mor=sorted(intlis, reverse=True)
+            for number in range(0,len(mor)):
+                for mini in range(2,mor[number]):
+                    if mor[number]%mini!=0:
+                        break
+
+    return mor[number]
+
+
+print(binary(num))
